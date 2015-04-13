@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,57 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title.png" translatesAutoresizingMaskIntoConstraints="NO" id="F7i-am-OJw">
+                                <rect key="frame" x="37" y="47" width="139" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="139" id="K63-aR-grk"/>
+                                    <constraint firstAttribute="height" constant="32" id="qiY-PC-FQq"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="8eW-2D-bwe" customClass="log">
+                                <rect key="frame" x="247" y="133" width="107" height="29"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="quN-3O-W8a">
+                                <rect key="frame" x="160" y="238" width="280" height="50"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="input.png" translatesAutoresizingMaskIntoConstraints="NO" id="BfN-Yj-a4f">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="phone.png" translatesAutoresizingMaskIntoConstraints="NO" id="REf-Qu-IjJ">
+                                        <rect key="frame" x="8" y="16" width="15" height="22"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="交易支点绑定手机号" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="PsV-uH-4Of" customClass="QUPhoneTextField">
+                                        <rect key="frame" x="47" y="0.0" width="233" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="quN-3O-W8a" firstAttribute="top" secondItem="8eW-2D-bwe" secondAttribute="bottom" constant="76" id="0h9-wl-sEG"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="quN-3O-W8a" secondAttribute="bottom" constant="312" id="3zC-S0-3gC"/>
+                            <constraint firstAttribute="centerX" secondItem="quN-3O-W8a" secondAttribute="centerX" id="C88-mU-i0p"/>
+                            <constraint firstItem="F7i-am-OJw" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="47" id="DFf-Gj-cef"/>
+                            <constraint firstItem="F7i-am-OJw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="37" id="MNe-dn-CgY"/>
+                            <constraint firstItem="8eW-2D-bwe" firstAttribute="top" secondItem="F7i-am-OJw" secondAttribute="bottom" constant="54" id="ZIu-ml-zJT"/>
+                            <constraint firstItem="quN-3O-W8a" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="238" id="gOF-8n-xcG"/>
+                            <constraint firstAttribute="centerX" secondItem="8eW-2D-bwe" secondAttribute="centerX" id="hZr-0X-i9O"/>
+                            <constraint firstItem="quN-3O-W8a" firstAttribute="top" secondItem="8eW-2D-bwe" secondAttribute="bottom" constant="76" id="qP7-Ru-eeA"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="input.png" width="265" height="35"/>
+        <image name="logo.png" width="162" height="40"/>
+        <image name="phone.png" width="15" height="22"/>
+        <image name="title.png" width="139" height="32"/>
+    </resources>
 </document>
